@@ -1,5 +1,5 @@
 .main-nav {
-  display:flex;
+	display:flex;
 	justify-content: space-between;
 	padding: 10px 0;
 	border-bottom: 1px solid $light-gray;
@@ -7,15 +7,16 @@
 
 .left-nav > ul,
 .right-nav > ul {
-  display: flex;
+	display: flex;
 	align-items: center;
 }
 
 .left-nav {
 
-  > ul {
-    > li {
-      margin-left: 20px;
+	> ul {
+
+		> li {
+			margin-left: 20px;
 			cursor: pointer;
 			text-transform: uppercase;
 			font-family: $sans-serif;
@@ -23,35 +24,51 @@
 			font-size: 11px;
 			padding: 7px 9px;
 			transition: background-color 0.3s;
-    }
-  }
+		}
+	}
 
-  span {
-    margin-left: 10px;
-  }
+	span {
+		margin-left: 10px;
+	}
 }
 
-.right-nav  {
+.right-nav {
 
-  > ul {
+	> ul {
 
-    > li {
-      margin-left: 5px;
+		> li {
+			margin-left: 5px;
 			cursor: pointer;
-    }
+		}
 
-    > li:last-of-type {
-      position: relative;
+		li:last-of-type {
+			position: relative;
 			transition: background-color 0.3s;
-    }
-  }
-  
-  i {
-    font-size: 16px;
-  }
+		}
+	}
+
+	i {
+		font-size: 16px;
+	}
 }
+
 
 .left-nav > ul > li:hover,
 .right-nav > ul > li:last-of-type:hover {
-  background-color: $lightest-gray;
+	background-color: $lightest-gray;
+}
+
+@media all and (max-width: 1000px) {
+	.right-nav {
+		
+		button {
+			display: none;
+		}
+	}
+  .left-nav > ul > li {
+  	margin: 0;
+  }
+  .main-nav {
+  	padding: 20px 0;
+  }
 }
